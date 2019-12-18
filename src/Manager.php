@@ -12,7 +12,6 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Gate;
-use Illuminate\Support\Facades\Schema;
 use Symfony\Component\Finder\Finder;
 use Vsch\TranslationManager\Classes\PathTemplateResolver;
 use Vsch\TranslationManager\Classes\TranslationFileRewriter;
@@ -361,8 +360,10 @@ class Manager
             }
             //            $groups = $groups->where('group','<>', self::JSON_GROUP);
 
-            if (Schema::hasTable('ltm_translations')) {
+            try {
                 $this->groupList = ManagerServiceProvider::getLists($groups->pluck('group', 'group'));
+            } catch (\Exception $e) {
+                $this->errors[] = $e->getMessage();
             }
         }
         return $this->groupList ?? [];
