@@ -1,5 +1,5 @@
 {
-    "name": "vsch/laravel-translation-manager",
+    "name": "industrarena/laravel-translation-manager",
     "description": "Enhanced Laravel Translation Manager",
     "keywords": [
         "laravel",
@@ -52,5 +52,5 @@
         "post-update-cmd": [
         ]
     },
-    "minimum-stability": "stable"
+    "minimum-stability": "dev"
 }
