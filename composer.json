@@ -16,10 +16,10 @@
         }
     ],
     "require": {
-        "php": ">=7.2",
-        "illuminate/support": "^6.0",
-        "laravelcollective/html": "^6.0",
-        "illuminate/translation": "^6.0",
+        "php": ">=7.2.5",
+        "illuminate/support": "^6.0|^7.0",
+        "laravelcollective/html": "^6.0|^7.0",
+        "illuminate/translation": "^6.0|^7.0",
         "doctrine/dbal": "~2.9",
         "symfony/finder": "~4.3",
         "laravel/helpers": "^1.1"
@@ -27,8 +27,8 @@
     "require-dev": {
         "phpspec/phpspec": "~5.1",
         "fzaninotto/faker": "~1.4",
-        "mockery/mockery": "0.9.*",
-        "phpunit/phpunit": "~8.0"
+        "mockery/mockery": "0.9.*|^1.0",
+        "phpunit/phpunit": "~8.0|^8.5"
     },
     "autoload": {
         "classmap": [
